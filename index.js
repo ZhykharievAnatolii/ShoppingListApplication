@@ -32,3 +32,25 @@ function renderItem(text) {
     item.append(deleteButton);
     list.append(item);
 }
+const renderItem = (text) => {
+    const item = document.createElement('li');
+    const button = document.createElement('button');
+    button.innerText = 'X';
+    item.innerText = text;
+    item.append(button);
+    button.onclick = () => {
+        item.remove();
+    };
+    item.onmousedown = () => {
+        item.classList.add('red');
+    };
+
+    item.onmouseup = () => {
+        item.classList.remove('red');
+    }
+
+
+    list.append(item);
+};
+
+names.forEach(renderItem);
