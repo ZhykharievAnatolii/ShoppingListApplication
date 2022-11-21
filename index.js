@@ -56,3 +56,15 @@ const renderItem = (text) => {
 // document.body.onclick=(event)=>{
 // const elem=event.target;
 // }
+const header= document.querySelector('header');
+document.addEventListener(()=>{
+        const{scrolY}=window;
+        console.log(scrolY);
+        if(scrolY===0){
+            header.classList.remove('scrolled')
+        }
+        else{
+            header.classList.add('scrolled')
+        }
+    }
+);
