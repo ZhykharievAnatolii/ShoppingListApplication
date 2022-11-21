@@ -21,17 +21,17 @@ button.onclick=()=>{
     renderItem(value);
     input.value='';
 }
-function renderItem(text) {
-    const item=document.createElement('li');
-    const deleteButton=document.createElement('button');
-    deleteButton.innerText='X';
-    deleteButton.onclick=()=>{
-        item.remove();
-    };
-    item.innerText=text;
-    item.append(deleteButton);
-    list.append(item);
-}
+// function renderItem(text) {
+//     const item=document.createElement('li');
+//     const deleteButton=document.createElement('button');
+//     deleteButton.innerText='X';
+//     deleteButton.onclick=()=>{
+//         item.remove();
+//     };
+//     item.innerText=text;
+//     item.append(deleteButton);
+//     list.append(item);
+// }
 const renderItem = (text) => {
     const item = document.createElement('li');
     const button = document.createElement('button');
@@ -48,9 +48,6 @@ const renderItem = (text) => {
     item.onmouseup = () => {
         item.classList.remove('red');
     }
-
-
     list.append(item);
 };
-
 names.forEach(renderItem);
