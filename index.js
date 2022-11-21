@@ -37,6 +37,7 @@ const renderItem = (text) => {
     const button = document.createElement('button');
     button.innerText = 'X';
     item.innerText = text;
+    // deleteButton.dataset.type='remove'
     item.append(button);
     button.onclick = () => {
         item.remove();
@@ -50,4 +51,8 @@ const renderItem = (text) => {
     }
     list.append(item);
 };
-names.forEach(renderItem);
+// names.forEach(renderItem);
+//
+// document.body.onclick=(event)=>{
+// const elem=event.target;
+// }
