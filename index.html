@@ -26,6 +26,19 @@
 <!--        create-->
 <!--    </button>-->
     <button data-type="create"> Create</button>
+    <form action="#" name="nameCreate" novalidate>
+        <label>
+            <input type="text" name="name" placeholder="Enter new name" required data-min="4" data-max="16">
+            <span></span>
+        </label>
+        <label>
+            <input type="email" name="email" placeholder="Enter email" required data-min="6" data-max="20">
+            <span></span>
+        </label>
+        <button type="submit">
+            Send
+        </button>
+    </form>
 </main>
 <footer>
 
